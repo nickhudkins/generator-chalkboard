@@ -11,16 +11,27 @@ describe('chalkboard:app', function () {
       .inDir(path.join(os.tmpdir(), './temp-test'))
       .withOptions({ 'skip-install': true })
       .withPrompt({
-        someOption: true
+        appName: 'testApp'
       })
-      .on('end', done);
-  });
+      .on('end', done)
+  })
 
-  it('creates files', function () {
+  it('creates config files', function () {
     assert.file([
       'package.json',
       '.editorconfig',
+      'webpack.config.dev.js',
+      'webpack.config.prod.js',
       '.jshintrc'
-    ]);
-  });
-});
+    ])
+  })
+  it('creates app files & directories', function(){
+    assert.file([
+      'index.html'
+    ])
+    assert.file([
+      'client/entry.jsx',
+      'client/flux.js'
+    ])
+  })
+})
