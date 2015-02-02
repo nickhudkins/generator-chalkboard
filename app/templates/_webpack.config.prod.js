@@ -37,7 +37,6 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-
     new webpack.IgnorePlugin(/vertx/),
     new webpack.IgnorePlugin(/un~$/)
   ],

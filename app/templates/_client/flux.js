@@ -1,5 +1,5 @@
-var Fluxxor = require('fluxxor');
-var stores  = require('stores'),
-    actions = require('actions');
+import Fluxxor from 'fluxxor'
+import stores from 'stores'
+import actions from 'actions'
 
-module.exports = new Fluxxor.Flux(stores, actions);
+export default new Fluxxor.Flux(stores, actions)

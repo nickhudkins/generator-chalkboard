@@ -18,20 +18,28 @@ describe('chalkboard:app', function () {
 
   it('creates config files', function () {
     assert.file([
-      'package.json',
       '.editorconfig',
+      '.jshintrc',
+      'package.json',
       'webpack.config.dev.js',
-      'webpack.config.prod.js',
-      '.jshintrc'
+      'webpack.config.prod.js'
     ])
   })
+
   it('creates app files & directories', function(){
     assert.file([
-      'index.html'
-    ])
-    assert.file([
+      'index.html',
       'client/entry.jsx',
-      'client/flux.js'
+      'client/flux.js',
+      'lib/Constants.js',
+      'lib/actions/index.js',
+      'lib/routes/index.js',
+      'lib/stores/index.js',
+      'lib/stores/AppStateStore.js',
+      'lib/views/Application.jsx',
+      'lib/views/Home/Handler.jsx'
     ])
   })
+
+
 })

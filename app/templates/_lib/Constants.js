@@ -1,9 +1,5 @@
-var keyMirror = require('react/lib/keyMirror');
+import keyMirror from 'react/lib/keyMirror'
 
-var ACTIONS = keyMirror({
-  TEST_ACTION: null,
-});
-
-module.exports = {
-  ACTIONS: ACTIONS
-};
+export var ACTIONS = keyMirror({
+  TEST_ACTION: null
+})

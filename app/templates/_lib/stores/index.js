@@ -1,5 +1,7 @@
-var AppStateStore = require('./AppStateStore');
+import AppStateStore from './AppStateStore'
 
-module.exports = {
+var stores = {
   AppStateStore: new AppStateStore()
 };
+
+export default stores

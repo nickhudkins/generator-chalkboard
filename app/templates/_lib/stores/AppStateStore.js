@@ -1,24 +1,25 @@
-var Fluxxor = require('fluxxor');
-var Constants = require('Constants');
+import Fluxxor from 'fluxxor'
+import Constants from 'Constants'
 
 var AppStateStore = Fluxxor.createStore({
-  initialize: function (){
-    this.testState = false;
+
+  initialize() {
+    this.testState = false
     this.bindActions(
       Constants.ACTIONS.TEST_ACTION, this.toggleTestState
-    );
+    )
   },
 
-  toggleTestState: function(){
-    this.testState = !this.testState;
-    this.emit('change');
+  toggleTestState() {
+    this.testState = !this.testState
+    this.emit('change')
   },
 
-  getState: function (){
+  getState() {
     return {
       testState: this.testState
     };
   }
 });
 
-module.exports = AppStateStore;
+export default AppStateStore

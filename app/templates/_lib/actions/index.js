@@ -1,8 +1,8 @@
-var Constants = require('Constants');
+import Constants from 'Constants'
 
-module.exports = {
+export default {
   testAction: function(){
-    console.log('Action Called');
-    this.dispatch(Constants.ACTIONS.TEST_ACTION);
+    console.log('Action Called')
+    this.dispatch(Constants.ACTIONS.TEST_ACTION)
   }
-};
+}

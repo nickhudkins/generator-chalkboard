@@ -1,12 +1,7 @@
-var React = require('react/addons');
-var Router = require('react-router');
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
-
-var Application = require('views/Application');
-var Home = require('views/Home/Handler');
-
-
+import React from 'react/addons'
+import {Route, DefaultRoute} from 'react-router'
+import Application from 'views/Application'
+import Home from 'views/Home/Handler'
 
 var routes = (
   <Route name="app" handler={Application} path="/">
@@ -14,4 +9,4 @@ var routes = (
   </Route>
 );
 
-module.exports = routes;
+export default routes

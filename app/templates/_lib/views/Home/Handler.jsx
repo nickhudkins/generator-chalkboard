@@ -1,21 +1,22 @@
-var React = require('react/addons');
-var Fluxxor = require('fluxxor');
-var FluxMixin = Fluxxor.FluxMixin(React);
+import React from 'react/addons'
+import Fluxxor from 'fluxxor'
+
+var FluxMixin = Fluxxor.FluxMixin(React)
 
 var HomeView = React.createClass({
   mixins: [FluxMixin],
 
-  onClick: function(){
-    this.getFlux().actions.testAction();
+  onClick() {
+    this.getFlux().actions.testAction()
   },
 
-  render: function(){
+  render() {
     return (
       <div className="homeView">
-        <h1 onClick={this.onClick}>Hello World</h1>
+        <h1 onClick={this.onClick}>Hello DUDE</h1>
       </div>
-    );
+    )
   }
-});
+})
 
-module.exports = HomeView;
+export default HomeView

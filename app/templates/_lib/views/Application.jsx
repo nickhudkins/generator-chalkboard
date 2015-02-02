@@ -1,10 +1,8 @@
-var React = require('react/addons');
-
-var ReactRouter = require('react-router');
-var RouteHandler = ReactRouter.RouteHandler;
+import React from 'react/addons'
+import {RouteHandler} from 'react-router'
 
 var Application = React.createClass({
-  render: function(){
+  render() {
     return (
       <div className="application">
         <RouteHandler {...this.props} />
@@ -13,4 +11,4 @@ var Application = React.createClass({
   }
 });
 
-module.exports = Application;
+export default Application
