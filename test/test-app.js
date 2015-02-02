@@ -33,7 +33,7 @@ describe('chalkboard:app', function () {
       'client/flux.js',
       'lib/Constants.js',
       'lib/actions/index.js',
-      'lib/routes/index.js',
+      'lib/routes/index.jsx',
       'lib/stores/index.js',
       'lib/stores/AppStateStore.js',
       'lib/views/Application.jsx',
